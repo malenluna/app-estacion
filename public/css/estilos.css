@@ -1,0 +1,101 @@
+:root {
+  --fondo: #f4efe6;
+  --tinta: #1d2a35;
+  --suave: #5b6b78;
+  --acento: #e4572e;
+  --tarjeta: #fffaf0;
+  --borde: #d9cfbd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--fondo);
+  color: var(--tinta);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+a { color: inherit; }
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--borde);
+}
+.barra a { text-decoration: none; font-weight: 600; }
+.marca { font-family: "Fraunces", serif; font-size: 1.25rem; }
+
+main { flex: 1; width: 100%; max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+.hero { padding: 5rem 0 3rem; max-width: 640px; }
+.contenedor { padding: 3rem 0; }
+
+.etiqueta {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--acento);
+  margin: 0 0 .75rem;
+}
+.bajada { color: var(--suave); font-size: 1.1rem; line-height: 1.6; margin: 0 0 1.5rem; }
+
+.boton {
+  display: inline-block;
+  background: var(--tinta);
+  color: var(--fondo);
+  padding: .85rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .15s;
+}
+.boton:hover { background: var(--acento); }
+
+.volver { color: var(--suave); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+.volver:hover { color: var(--acento); }
+
+.estado { color: var(--suave); }
+
+.grilla {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform .15s, border-color .15s;
+}
+.tarjeta:hover { transform: translateY(-3px); border-color: var(--acento); }
+.tarjeta-apodo { font-family: "Fraunces", serif; font-size: 1.3rem; font-weight: 600; }
+.tarjeta-ubicacion { color: var(--suave); font-size: .95rem; }
+.tarjeta-visitas { margin-top: auto; padding-top: .75rem; font-size: .8rem; font-weight: 600; color: var(--acento); }
+.tarjeta.inactiva { opacity: .65; }
+
+.pie { text-align: center; padding: 1.5rem; font-size: .8rem; color: var(--suave); border-top: 1px solid var(--borde); }

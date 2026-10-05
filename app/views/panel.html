@@ -1,0 +1,22 @@
+    <section class="contenedor">
+      <h1>Estaciones</h1>
+      <p class="bajada">Elegí una estación para ver su detalle.</p>
+      <p id="estado" class="estado">Cargando estaciones…</p>
+      <ul id="lista" class="grilla"></ul>
+    </section>
+
+    <template id="tpl-estacion">
+      <li>
+        <a class="tarjeta" href="#">
+          <span class="tarjeta-apodo"></span>
+          <span class="tarjeta-ubicacion"></span>
+          <span class="tarjeta-visitas"></span>
+        </a>
+      </li>
+    </template>
+
+    <script>
+      const BASE_URL = "{{BASE_URL}}";
+      const API_URL = "{{API_URL}}";
+    </script>
+    <script src="{{BASE_URL}}/public/js/panel.js"></script>
